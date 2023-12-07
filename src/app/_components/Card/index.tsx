@@ -3,7 +3,7 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import Link from 'next/link'
 
-import { Product } from '../../../payload/payload-types'
+import { Category, Product } from '../../../payload/payload-types'
 import { Media } from '../Media'
 import { Price } from '../Price'
 
@@ -80,7 +80,7 @@ export const Card: React.FC<{
             {showCategories && hasCategories && (
               <div>
                 {categories?.map((category, index) => {
-                  const { title: titleFromCategory } = category
+                  const { title: titleFromCategory } = category as Category
 
                   const categoryTitle = titleFromCategory || 'Untitled category'
 
