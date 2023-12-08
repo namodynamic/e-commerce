@@ -193,6 +193,7 @@ export interface Category {
   createdAt: string;
 }
 export interface Product {
+  value: any;
   id: string;
   title: string;
   publishedOn?: string | null;
